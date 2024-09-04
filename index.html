@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบคัดกรองความเสี่ยงโรคออทิสติกในเด็กก่อนวัยเรียน</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; /* ฟ้าอ่อน */
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #006699; /* ฟ้าเข้ม */
+            margin-bottom: 20px;
+        }
+
+        p, ol {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        table, th, td {
+            border: 1px solid #cccccc;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #006699; /* ฟ้าเข้ม */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa; /* ฟ้าอ่อนเวลาเลื่อนเม้าส์ */
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group label {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #009688; /* เขียวเข้ม */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #00796b; /* เขียวเข้มขึ้น */
+        }
+
+        .additional-info {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>แบบคัดกรองความเสี่ยงโรคออทิสติกในเด็กก่อนวัยเรียน</h2>
+        
+        <p><strong>เกณฑ์การพิจารณา:</strong></p>
+        <ol>
+            <li>หากผลการคัดกรองไม่มีความบกพร่องทั้ง 3 ด้าน แสดงว่าไม่มีความเสี่ยงของโรคออทิสติก</li>
+            <li>หากผลการคัดกรองมีความบกพร่อง 2 ด้าน ด้านละ 2 ข้อ ขึ้นไป แสดงว่ามีความเสี่ยงของโรคออทิสติกระดับปานกลาง ควรประเมินซ้ำภายใน 2 สัปดาห์</li>
+            <li>หากผลการคัดกรองมีความบกพร่องทั้ง 3 ด้าน ด้านละ 4 ข้อ ขึ้นไป แสดงว่ามีความเสี่ยงของโรคออทิสติกระดับมาก ควรปรึกษาแพทย์เพื่อทำการตรวจวินิจฉัยต่อไป</li>
+        </ol>
+
+        <form id="autismSurvey">
+            <table>
+                <tr>
+                    <th>ข้อที่</th>
+                    <th>ลักษณะ / พฤติกรรม</th>
+                    <th>ผลการประเมิน</th>
+                </tr>
+
+                <!-- ด้านอารมณ์/พฤติกรรม -->
+                <tr>
+                    <th colspan="3">ด้านอารมณ์/พฤติกรรม</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>อุจจาระรดกางเกง โดยไม่บอกกล่าว</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q1" value="yes">ใช่</label>
+                            <label><input type="radio" name="q1" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>ทุบตีทำร้ายตัวเองหรือผู้อื่น</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q2" value="yes">ใช่</label>
+                            <label><input type="radio" name="q2" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>มีพฤติกรรมซ้ำ ๆ เช่น สะบัดนิ้วมือ เล่นมือ ดม เคาะ หรือหมุนสิ่งของ เป็นต้น</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q3" value="yes">ใช่</label>
+                            <label><input type="radio" name="q3" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>แยกตัวอยู่คนเดียวตามลำพัง</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q4" value="yes">ใช่</label>
+                            <label><input type="radio" name="q4" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>จัดเรียงลำดับวัตถุในตำแหน่งแบบเดิม ๆ ไม่ยอมให้เคลื่อนย้ายวัตถุ</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q5" value="yes">ใช่</label>
+                            <label><input type="radio" name="q5" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>มีพฤติกรรมหลีกหนีการสัมผัส เช่น เดินเขย่งปลายเท้า ไม่ชอบการกอดรัด ทนต่อเสียงบางอย่างไม่ได้</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q6" value="yes">ใช่</label>
+                            <label><input type="radio" name="q6" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>มีพฤติกรรมอยู่ไม่นิ่ง เช่น ชอบวิ่ง เดินไปมารอบห้อง เป็นต้น</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q7" value="yes">ใช่</label>
+                            <label><input type="radio" name="q7" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>ไม่เข้าใจวิธีการเล่น ไม่เข้าใจกติกาการเล่น</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q8" value="yes">ใช่</label>
+                            <label><input type="radio" name="q8" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- ด้านการสื่อสาร -->
+                <tr>
+                    <th colspan="3">ด้านการสื่อสาร</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ใช้ภาษาพูดของตนเองที่ผู้อื่นไม่เข้าใจ</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q9" value="yes">ใช่</label>
+                            <label><input type="radio" name="q9" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>พูดเลียนแบบ หรือพูดทวนคำถาม</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q10" value="yes">ใช่</label>
+                            <label><input type="radio" name="q10" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>พูดคำซ้ำๆที่เคยที่ได้ยินบ่อย เช่น พูดตามโฆษณาที่ได้ยินจากโทรทัศน์</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q11" value="yes">ใช่</label>
+                            <label><input type="radio" name="q11" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>พูดเรื่องที่ตนเองสนใจโดยไม่สนใจผู้ฟัง</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q12" value="yes">ใช่</label>
+                            <label><input type="radio" name="q12" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>ไม่เข้าใจคำที่เป็นนามธรรม เช่น การเอื้อเฟื้อเผื่อแผ่</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q13" value="yes">ใช่</label>
+                            <label><input type="radio" name="q13" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>อัตราการพูดเร็วหรือช้าเกินไป</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q14" value="yes">ใช่</label>
+                            <label><input type="radio" name="q14" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                    <th colspan="3">ด้านสังคม</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ไม่มองสบตากับผู้อื่นขณะสนทนา</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q9" value="yes">ใช่</label>
+                            <label><input type="radio" name="q9" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>ไม่มีปฏิสัมพันธ์กับบุคคลรอบข้าง เช่น ไม่เล่นกับเพื่อน ไม่สนใจคน</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q10" value="yes">ใช่</label>
+                            <label><input type="radio" name="q10" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>มีปฏิสัมพันธ์กับคนรอบข้างไม่เหมาะสม เช่น เล่นกับเพื่อนรุนแรง</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q11" value="yes">ใช่</label>
+                            <label><input type="radio" name="q11" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>แสดงพฤติกรรมการตอบสนองทางอารมณ์ และ สังคมไม่เหมาะสม เช่น ส่งเสียงดังกรีดร้อง ทำร้ายตนเองหรือผู้อื่นเมื่อถูกขัดใจ</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q12" value="yes">ใช่</label>
+                            <label><input type="radio" name="q12" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td> แยกตัวออกมาอยู่ตามลำพัง เช่น ในขณะที่เพื่อนทำกิจกรรมกลุ่มเด็กจะไม่ยอมเข้าร่วมกิจกรรม</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q13" value="yes">ใช่</label>
+                            <label><input type="radio" name="q13" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>ไม่สามารถปฏิบัติตามกฎกติกา ระเบียบ หรือข้อตกลงได้ เช่น ไม่รู้จักการรอคอย ไม่รู้จักการเข้าแถว</td>
+                    <td>
+                        <div class="radio-group">
+                            <label><input type="radio" name="q14" value="yes">ใช่</label>
+                            <label><input type="radio" name="q14" value="no">ไม่ใช่</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="additional-info">
+                <p><strong>ปรับปรุงจาก</strong></p>
+                <p>รศ.พญ.นิจศรา เรืองดารากานนท์. Modified Checklist for Autism in Toddlers (M-CHAT). หน่วยพัฒนาการเด็ก โรงพยาบาลรามาธิบดี.</p>
+                <p>แบบประเมินความเสี่ยงภาวะออทิซึม PDDSQ สำหรับ เด็กอายุ 1-4 ปี (12 - 47 เดือน).</p>
+            </div>
+            
+            <button type="submit" class="submit-btn">ส่งคำตอบ</button>
+        </form>
+    </div>
+</body>
+</html>
