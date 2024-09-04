@@ -211,6 +211,9 @@
                     <th colspan="3">ด้านการสื่อสาร</th>
                 </tr>
                 <tr>
+                    <th colspan="3">ด้านการสื่อสาร</th>
+                </tr>
+                <tr>
                     <td>1</td>
                     <td>ใช้ภาษาพูดของตนเองที่ผู้อื่นไม่เข้าใจ</td>
                     <td>
@@ -270,6 +273,9 @@
                         </div>
                     </td>
                 </tr>
+
+                <!-- ด้านสังคม -->
+                <tr>
                     <th colspan="3">ด้านสังคม</th>
                 </tr>
                 <tr>
@@ -341,7 +347,28 @@
             </div>
             
             <button type="submit" class="submit-btn">ส่งคำตอบ</button>
+            
         </form>
     </div>
+
+    <script>
+        document.getElementById('autismSurvey').addEventListener('submit', function(event) {
+            let isValid = true;
+            const questions = document.querySelectorAll('input[type="radio"]');
+            
+            questions.forEach(question => {
+                if (!document.querySelector(`input[name="${question.name}"]:checked`)) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                event.preventDefault(); // ป้องกันการส่งแบบฟอร์ม
+                alert('กรุณาตอบทุกคำถามก่อนส่ง'); // แสดงข้อความป๊อบอัพ
+            } else {
+                alert('ขอบคุณที่ส่งคำตอบ!'); // แสดงข้อความป๊อบอัพ
+            }
+        });
+    </script>
 </body>
 </html>
